@@ -1,0 +1,16 @@
+X_train: (240, 64, 64), y_train: (240,)
+X_val:   (80, 64, 64), y_val:   (80,)
+X_test:  (80, 64, 64), y_test:  (80,)
+X_test_corrupted:  (80, 64, 64), y_test:  (80,)
+--- Evaluating Depth=4 ---
+Depth:4 | Model:Single Tree | Bias:0.8608  | Variance:0.0642   | Mean Acc:0.0929   | N/A
+          | Model:100-Bagged | Bias:0.8683  | Variance:0.0020   | Mean Acc:0.6117   | Var Reduction (%):96.86%
+------------------------------------------------------------------------------------------
+--- Evaluating Depth=16 ---
+Depth:16 | Model:Single Tree | Bias:0.6339  | Variance:0.2322   | Mean Acc:0.2737   | N/A
+          | Model:100-Bagged | Bias:0.6425  | Variance:0.0118   | Mean Acc:0.7479   | Var Reduction (%):94.90%
+------------------------------------------------------------------------------------------
+--- Evaluating Depth=None ---
+Depth:None | Model:Single Tree | Bias:0.3797  | Variance:0.6411   | Mean Acc:0.4896   | N/A
+          | Model:100-Bagged | Bias:0.4894  | Variance:0.0234   | Mean Acc:0.8000   | Var Reduction (%):96.35%
+------------------------------------------------------------------------------------------

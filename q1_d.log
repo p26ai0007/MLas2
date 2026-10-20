@@ -1,0 +1,50 @@
+X_train: (240, 64, 64), y_train: (240,)
+X_val:   (80, 64, 64), y_val:   (80,)
+X_test:  (80, 64, 64), y_test:  (80,)
+X_test_corrupted:  (80, 64, 64), y_test:  (80,)
+================================================================================
+PERFORMANCE COMPARISON: FROZEN SINGLE TREE vs BAGGING (B=200)
+================================================================================
+Model                | Clean Test Acc  | Clean Conf   | Corrupt Test Acc | Corrupt Conf
+--------------------------------------------------------------------------------
+Single Tree          | 0.6500          | 0.9750       | 0.3500           | 1.0000      
+Bagging (B=200)      | 0.8500          | 0.4117       | 0.6375           | 0.2697      
+================================================================================
+================================================================================
+CASE STUDY: 2 FACES WHERE BAGGING CORRECTS THE TREE
+================================================================================
+Test Face Index: 1
+  - True Label:         39
+  - Single Tree Pred:   12
+  - Bagging Majority:   39
+  - Bagging Vote Breakdown (Class: Votes): {np.int64(0): np.int64(5), np.int64(1): np.int64(1), np.int64(3): np.int64(9), np.int64(4): np.int64(3), np.int64(6): np.int64(2), np.int64(7): np.int64(7), np.int64(8): np.int64(11), np.int64(9): np.int64(8), np.int64(11): np.int64(2), np.int64(12): np.int64(10), np.int64(13): np.int64(1), np.int64(14): np.int64(10), np.int64(15): np.int64(5), np.int64(16): np.int64(6), np.int64(17): np.int64(20), np.int64(20): np.int64(16), np.int64(21): np.int64(1), np.int64(22): np.int64(8), np.int64(23): np.int64(1), np.int64(24): np.int64(7), np.int64(25): np.int64(1), np.int64(26): np.int64(1), np.int64(27): np.int64(2), np.int64(28): np.int64(7), np.int64(29): np.int64(1), np.int64(30): np.int64(3), np.int64(32): np.int64(4), np.int64(34): np.int64(10), np.int64(35): np.int64(1), np.int64(38): np.int64(3), np.int64(39): np.int64(34)}
+--------------------------------------------------
+Test Face Index: 6
+  - True Label:         2
+  - Single Tree Pred:   22
+  - Bagging Majority:   2
+  - Bagging Vote Breakdown (Class: Votes): {np.int64(1): np.int64(3), np.int64(2): np.int64(38), np.int64(3): np.int64(5), np.int64(4): np.int64(4), np.int64(5): np.int64(1), np.int64(6): np.int64(3), np.int64(7): np.int64(3), np.int64(8): np.int64(3), np.int64(9): np.int64(3), np.int64(10): np.int64(3), np.int64(11): np.int64(3), np.int64(12): np.int64(1), np.int64(13): np.int64(8), np.int64(14): np.int64(5), np.int64(15): np.int64(3), np.int64(16): np.int64(10), np.int64(17): np.int64(3), np.int64(18): np.int64(2), np.int64(19): np.int64(4), np.int64(20): np.int64(12), np.int64(21): np.int64(4), np.int64(22): np.int64(9), np.int64(23): np.int64(1), np.int64(24): np.int64(4), np.int64(25): np.int64(6), np.int64(27): np.int64(4), np.int64(28): np.int64(8), np.int64(29): np.int64(2), np.int64(30): np.int64(8), np.int64(31): np.int64(1), np.int64(32): np.int64(3), np.int64(33): np.int64(4), np.int64(34): np.int64(16), np.int64(36): np.int64(3), np.int64(37): np.int64(1), np.int64(38): np.int64(4), np.int64(39): np.int64(5)}
+--------------------------------------------------
+================================================================================
+CASE STUDY: 2 FACES WHERE BOTH SINGLE TREE AND BAGGING ARE WRONG
+================================================================================
+Test Face Index: 4
+  - True Label:         37
+  - Single Tree Pred:   4
+  - Bagging Majority:   2
+  - Bagging Vote Breakdown (Class: Votes): {np.int64(0): np.int64(2), np.int64(1): np.int64(4), np.int64(2): np.int64(43), np.int64(3): np.int64(6), np.int64(4): np.int64(27), np.int64(5): np.int64(4), np.int64(6): np.int64(1), np.int64(7): np.int64(3), np.int64(8): np.int64(4), np.int64(9): np.int64(4), np.int64(11): np.int64(2), np.int64(12): np.int64(11), np.int64(15): np.int64(4), np.int64(16): np.int64(4), np.int64(17): np.int64(4), np.int64(20): np.int64(6), np.int64(22): np.int64(2), np.int64(24): np.int64(1), np.int64(25): np.int64(4), np.int64(27): np.int64(10), np.int64(28): np.int64(2), np.int64(29): np.int64(3), np.int64(32): np.int64(7), np.int64(34): np.int64(1), np.int64(35): np.int64(2), np.int64(37): np.int64(33), np.int64(39): np.int64(6)}
+--------------------------------------------------
+Test Face Index: 9
+  - True Label:         9
+  - Single Tree Pred:   26
+  - Bagging Majority:   26
+  - Bagging Vote Breakdown (Class: Votes): {np.int64(0): np.int64(2), np.int64(1): np.int64(3), np.int64(2): np.int64(1), np.int64(3): np.int64(1), np.int64(4): np.int64(1), np.int64(7): np.int64(5), np.int64(8): np.int64(3), np.int64(9): np.int64(55), np.int64(10): np.int64(2), np.int64(11): np.int64(2), np.int64(12): np.int64(1), np.int64(14): np.int64(4), np.int64(16): np.int64(1), np.int64(17): np.int64(5), np.int64(19): np.int64(5), np.int64(21): np.int64(3), np.int64(24): np.int64(6), np.int64(25): np.int64(8), np.int64(26): np.int64(68), np.int64(27): np.int64(2), np.int64(28): np.int64(2), np.int64(29): np.int64(1), np.int64(30): np.int64(2), np.int64(31): np.int64(1), np.int64(34): np.int64(6), np.int64(36): np.int64(4), np.int64(38): np.int64(5), np.int64(39): np.int64(1)}
+--------------------------------------------------
+Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.

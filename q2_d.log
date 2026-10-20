@@ -1,0 +1,37 @@
+X_train: (240, 64, 64), y_train: (240,)
+X_val:   (80, 64, 64), y_val:   (80,)
+X_test:  (80, 64, 64), y_test:  (80,)
+X_test_corrupted:  (80, 64, 64), y_test:  (80,)
+=====================================================================================
+Single Tree | Clean Acc:0.6500 | Clean Conf:0.9750 | Masked Acc:0.3500 | Masked Conf:1.0000
+Bagging (Depth=None, Min_leaf=2, B=200) | Clean Acc:0.8500 | Clean Conf::0.4117 | Masked Acc:0.6375 | Masked Conf:0.2697
+Boosting (Depth=3, T=100) | 0.4500 | 0.1010 | 0.3625 | 0.1013
+=====================================================================================
+
+======================================================================
+CASE STUDY DISAGREEMENT (Test Sample Index 1):
+True Label:39
+Bagging Prediction:12 (Correct:False)
+Boosting Prediction:14 (Correct:False)
+======================================================================
+======================================================================
+CASE STUDY DISAGREEMENT (Test Sample Index 1):
+True Class Label:     39
+Bagging Prediction:   Class 12 (Correct: False)
+Boosting Prediction:  Class 14 (Correct: False)
+======================================================================
+
+--- BAGGING TREE DISAGREEMENT BREAKDOWN ---
+Class 12: 42  votes (21.0%)
+Class 35: 28  votes (14.0%)
+Class 20: 16  votes (8.0%)
+
+--- BOOSTING WEIGHTED VOTE (CONFIDENCE) BREAKDOWN ---
+Class 14: Normalized Score = 0.1019
+Class 3 : Normalized Score = 0.1017
+Class 12: Normalized Score = 0.0910
+--- FINAL BOOSTING SAMPLE WEIGHT DISTRIBUTION IN TRAINING DATA ---
+Total Weight on True Class 39 Training Images:       0.006610
+Total Weight on Predicted Class 14 Training Images:  0.043040
+======================================================================
+

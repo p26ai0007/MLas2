@@ -1,0 +1,75 @@
+X_train: (240, 64, 64), y_train: (240,)
+X_val:   (80, 64, 64), y_val:   (80,)
+X_test:  (80, 64, 64), y_test:  (80,)
+X_test_corrupted:  (80, 64, 64), y_test:  (80,)
+==========================================================================================
+Boosting | Learner:25 | B_Train Acc:0.2792 | B_Val Acc:0.1000 | B_Test Acc0.1875 | Time (s):17.485
+Bagging | Learner:25 | Bag_Train Acc:1.0000 | Bag_Val Acc:0.7875 | Bag_Test Acc0.8000 | Time (s):88.840
+Boosting | Learner:50 | B_Train Acc:0.8000 | B_Val Acc:0.3125 | B_Test Acc0.3375 | Time (s):34.894
+Bagging | Learner:50 | Bag_Train Acc:1.0000 | Bag_Val Acc:0.8000 | Bag_Test Acc0.8250 | Time (s):165.496
+Boosting | Learner:100 | B_Train Acc:0.9500 | B_Val Acc:0.4250 | B_Test Acc0.4500 | Time (s):82.849
+Bagging | Learner:100 | Bag_Train Acc:1.0000 | Bag_Val Acc:0.8375 | Bag_Test Acc0.8500 | Time (s):415.879
+==========================================================================================
+
+=================================================================
+BEST MODEL SELECTION SUMMARY (BASED ON VALIDATION ACCURACY)
+=================================================================
+Boosting Best L: 100 | Best Validation Accuracy: 0.4250
+Bagging  Best L: 100 | Best Validation Accuracy: 0.8375
+=================================================================
+======================================================================
+HARD SAMPLE INSPECTION (Sample Index: 0)
+Final Round Weight: 0.047622 (Initial weight was 0.004167)
+True Class Label:   33
+======================================================================
+Misclassified in 90 / 100 boosting rounds.
+
+================================================================================
+HARD SAMPLE DIAGNOSTICS (Index: 0 | True Label: 33)
+================================================================================
+Initial Weight:0.004167
+Final Round Weight:0.047622 (Factor of 11.43x higher)
+Total Rounds:100
+Misclassified Rounds:90 / 100 (90.0%)
+Correctly Classified In:10 / 100 (10.0%)
+
+--- Prediction Frequency Breakdown Across Rounds ---
+  Class  0 (CONFUSED WITH):  2 times (2.0%)
+  Class  1 (CONFUSED WITH):  7 times (7.0%)
+  Class  2 (CONFUSED WITH):  4 times (4.0%)
+  Class  3 (CONFUSED WITH):  4 times (4.0%)
+  Class  4 (CONFUSED WITH):  8 times (8.0%)
+  Class  6 (CONFUSED WITH):  1 times (1.0%)
+  Class  9 (CONFUSED WITH):  1 times (1.0%)
+  Class 12 (CONFUSED WITH):  5 times (5.0%)
+  Class 14 (CONFUSED WITH):  7 times (7.0%)
+  Class 15 (CONFUSED WITH):  3 times (3.0%)
+  Class 16 (CONFUSED WITH):  8 times (8.0%)
+  Class 17 (CONFUSED WITH):  7 times (7.0%)
+  Class 20 (CONFUSED WITH):  7 times (7.0%)
+  Class 22 (CONFUSED WITH):  5 times (5.0%)
+  Class 24 (CONFUSED WITH):  3 times (3.0%)
+  Class 25 (CONFUSED WITH):  4 times (4.0%)
+  Class 26 (CONFUSED WITH):  1 times (1.0%)
+  Class 27 (CONFUSED WITH):  1 times (1.0%)
+  Class 28 (CONFUSED WITH):  1 times (1.0%)
+  Class 33 (TRUE LABEL): 10 times (10.0%)
+  Class 34 (CONFUSED WITH):  4 times (4.0%)
+  Class 37 (CONFUSED WITH):  2 times (2.0%)
+  Class 39 (CONFUSED WITH):  5 times (5.0%)
+
+--- Step-by-Step Weight Mechanics (First 10 Rounds) ---
+Round (t)  | Pred Class | Correct?   | Error (eps_t)   | Alpha_t    | New Weight  
+---------------------------------------------------------------------------
+1          | 0          | False      | 0.9000          | 1.4663     | 0.004514    
+2          | 33         | True       | 0.8917          | 1.5557     | 0.001042    
+3          | 2          | False      | 0.8815          | 1.6564     | 0.001152    
+4          | 3          | False      | 0.8690          | 1.7716     | 0.001293    
+5          | 4          | False      | 0.8475          | 1.9487     | 0.001487    
+6          | 12         | False      | 0.7604          | 2.5086     | 0.001907    
+7          | 14         | False      | 0.7980          | 2.2900     | 0.002330    
+8          | 15         | False      | 0.7124          | 2.7567     | 0.003189    
+9          | 16         | False      | 0.5687          | 3.3870     | 0.005467    
+10         | 0          | False      | 0.6461          | 3.0615     | 0.008250    
+================================================================================
+

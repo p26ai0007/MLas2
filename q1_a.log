@@ -1,0 +1,31 @@
+X_train: (240, 64, 64), y_train: (240,)
+X_val:   (80, 64, 64), y_val:   (80,)
+X_test:  (80, 64, 64), y_test:  (80,)
+X_test_corrupted:  (80, 64, 64), y_test:  (80,)
+max_depth:2 | min_samples_leaf:1 | Train Acc:0.0750 | Val Acc:0.0750
+max_depth:2 | min_samples_leaf:2 | Train Acc:0.0750 | Val Acc:0.0625
+max_depth:2 | min_samples_leaf:4 | Train Acc:0.0750 | Val Acc:0.0750
+max_depth:4 | min_samples_leaf:1 | Train Acc:0.1250 | Val Acc:0.1125
+max_depth:4 | min_samples_leaf:2 | Train Acc:0.1250 | Val Acc:0.1000
+max_depth:4 | min_samples_leaf:4 | Train Acc:0.1250 | Val Acc:0.1250
+max_depth:8 | min_samples_leaf:1 | Train Acc:0.2250 | Val Acc:0.1875
+max_depth:8 | min_samples_leaf:2 | Train Acc:0.2250 | Val Acc:0.1750
+max_depth:8 | min_samples_leaf:4 | Train Acc:0.2250 | Val Acc:0.1875
+max_depth:16 | min_samples_leaf:1 | Train Acc:0.4250 | Val Acc:0.3500
+max_depth:16 | min_samples_leaf:2 | Train Acc:0.4250 | Val Acc:0.3375
+max_depth:16 | min_samples_leaf:4 | Train Acc:0.4250 | Val Acc:0.3250
+max_depth:None | min_samples_leaf:1 | Train Acc:1.0000 | Val Acc:0.5750
+max_depth:None | min_samples_leaf:2 | Train Acc:0.9958 | Val Acc:0.6375
+max_depth:None | min_samples_leaf:4 | Train Acc:0.9917 | Val Acc:0.6250
+-------------------------------------------------------
+Selected Best Parameters (Frozen): max_depth=None, min_samples_leaf=2
+
+=== Single Tree Baseline Summary Report ===
+Best Hyperparameters          : max_depth=None, min_samples_leaf=2
+Train Accuracy               : 0.9958
+Validation Accuracy          : 0.6375
+Clean Test Accuracy          : 0.6250
+Corrupted Test Accuracy      : 0.3500
+Number of Leaves             : 41
+Mean Samples per Leaf        : 5.85
+Fraction of Single-Sample Leaves: 0.0000 (0.00%)

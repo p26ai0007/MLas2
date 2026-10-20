@@ -1,0 +1,18 @@
+X_train: (240, 64, 64), y_train: (240,)
+X_val:   (80, 64, 64), y_val:   (80,)
+X_test:  (80, 64, 64), y_test:  (80,)
+X_test_corrupted:  (80, 64, 64), y_test:  (80,)
+B:1 | Train Acc:0.7208 | Val Acc:0.4000 | Test (Clean):0.4875 | Test (Corrupt):0.2375 | OOB Acc:0.3409  | Disagree:0.0000   | Margin:1.0000 | Avg Unique Samples:152.00 / Out of:240
+B:5 | Train Acc:0.9542 | Val Acc:0.5750 | Test (Clean):0.6625 | Test (Corrupt):0.3250 | OOB Acc:0.3410  | Disagree:0.7838   | Margin:0.2550 | Avg Unique Samples:148.20 / Out of:240
+B:10 | Train Acc:0.9917 | Val Acc:0.7250 | Test (Clean):0.7500 | Test (Corrupt):0.5500 | OOB Acc:0.3957  | Disagree:0.7769   | Margin:0.2700 | Avg Unique Samples:152.00 / Out of:240
+B:25 | Train Acc:1.0000 | Val Acc:0.8000 | Test (Clean):0.8375 | Test (Corrupt):0.5375 | OOB Acc:0.5833  | Disagree:0.7827   | Margin:0.2795 | Avg Unique Samples:150.12 / Out of:240
+B:50 | Train Acc:1.0000 | Val Acc:0.8375 | Test (Clean):0.8625 | Test (Corrupt):0.5125 | OOB Acc:0.7292  | Disagree:0.7881   | Margin:0.2718 | Avg Unique Samples:150.98 / Out of:240
+B:100 | Train Acc:1.0000 | Val Acc:0.8500 | Test (Clean):0.8375 | Test (Corrupt):0.6000 | OOB Acc:0.7667  | Disagree:0.7826   | Margin:0.2795 | Avg Unique Samples:151.58 / Out of:240
+B:200 | Train Acc:1.0000 | Val Acc:0.8625 | Test (Clean):0.8500 | Test (Corrupt):0.6375 | OOB Acc:0.7792  | Disagree:0.7799   | Margin:0.2849 | Avg Unique Samples:152.10 / Out of:240
+==========================================================================================
+Optimal Ensemble Size Selected: B = 200 (Validation Accuracy = 0.8625)
+==========================================================================================
+
+Theoretical Expected Unique Samples per Bootstrap (N=240): 151.89 (63.29%)
+Comparison: Empirical Average Unique Samples = 152.10 vs Theoretical = 151.89
+
