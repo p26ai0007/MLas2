@@ -1,6 +1,6 @@
 Requirements: can be found in requirments.txt (created usig "pip freeze > requirements.txt")
     
-    pip install numpy scikit-learn matplotlib tqdm papermill
+    pip install numpy scikit-learn matplotlib tqdm papermill ipykernel
 
 How to run all .ipynb files:
     
