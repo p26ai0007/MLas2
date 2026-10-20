@@ -6,6 +6,6 @@ How to run all .ipynb files:
     
     chmod +x run_all.sh
     
-    ./run_all.sh
+    ./run_all.bat
 
 Note: I ran each file manually, and Q3 codes were taking too much time, so I ran the code in kaggle and downloaded the log files.
